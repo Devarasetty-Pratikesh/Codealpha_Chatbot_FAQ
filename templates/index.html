@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Assistant | NLP Chatbot</title>
+    <!-- Premium Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-background">
+        <!-- Floating Ambient Background Orbs -->
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+
+        <div class="app-container">
+            <!-- Glassmorphic Chat Interface Card -->
+            <main class="chat-card">
+                <!-- Header Component -->
+                <header class="chat-header">
+                    <div class="bot-info">
+                        <div class="avatar-wrapper">
+                            <div class="bot-avatar">
+                                <i data-lucide="bot"></i>
+                            </div>
+                            <span class="pulse-dot" title="System Online"></span>
+                        </div>
+                        <div class="header-titles">
+                            <h1>FAQ Assistant</h1>
+                            <div class="status-row">
+                                <span class="status-lbl">Online</span>
+                                <span class="bullet">&bull;</span>
+                                <span class="tech-lbl">NLP Matcher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <button class="action-btn" id="clear-chat-btn" title="Clear Chat History">
+                            <i data-lucide="trash-2"></i>
+                        </button>
+                    </div>
+                </header>
+
+                <!-- Scrollable Message Stream -->
+                <div class="chat-body" id="chat-body">
+                    <!-- Bot Welcome Message -->
+                    <div class="message-row bot-row animate-in">
+                        <div class="message-bubble">
+                            <div class="message-text">
+                                Hello! I'm your NLP-powered FAQ assistant. Ask me anything about our services, orders, refunds, or account settings!
+                            </div>
+                            <span class="message-time">Just now</span>
+                        </div>
+                    </div>
+
+                    <!-- Quick Suggestions Pills -->
+                    <div class="suggestions-wrapper" id="suggestions-container">
+                        <p class="suggestions-title">Frequently Asked Questions:</p>
+                        <div class="suggestions-list">
+                            <button class="suggestion-pill" data-question="What are your working hours?">Working Hours</button>
+                            <button class="suggestion-pill" data-question="How can I reset my password?">Reset Password</button>
+                            <button class="suggestion-pill" data-question="Do you offer refunds?">Refunds</button>
+                            <button class="suggestion-pill" data-question="What payment methods are accepted?">Payments</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Controls Area -->
+                <footer class="chat-footer">
+                    <form id="chat-form" class="chat-input-form">
+                        <div class="input-container">
+                            <input 
+                                type="text" 
+                                id="user-input" 
+                                placeholder="Type a message or click a suggestion..." 
+                                autocomplete="off" 
+                                required
+                            />
+                            <button type="submit" class="send-button" id="send-button" aria-label="Send query">
+                                <i data-lucide="send"></i>
+                            </button>
+                        </div>
+                    </form>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        // Initialize Lucide SVG Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

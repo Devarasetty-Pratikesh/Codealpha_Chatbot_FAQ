@@ -1,0 +1,62 @@
+[
+  {
+    "question": "What are your working hours?",
+    "answer": "Our working hours are from 9 AM to 6 PM, Monday to Friday."
+  },
+  {
+    "question": "How can I reset my password?",
+    "answer": "Go to the login page and click on 'Forgot Password' to reset your password."
+  },
+  {
+    "question": "Where is my order?",
+    "answer": "You can track your order from the Orders section in your account."
+  },
+  {
+    "question": "Do you offer refunds?",
+    "answer": "Yes, refunds are available according to our refund policy."
+  },
+  {
+    "question": "How do I contact customer support?",
+    "answer": "You can contact customer support via email or phone."
+  },
+  {
+    "question": "What payment methods are accepted?",
+    "answer": "We accept credit cards, debit cards, UPI, and net banking."
+  },
+  {
+    "question": "Can I cancel my order?",
+    "answer": "Yes, orders can be cancelled before they are shipped."
+  },
+  {
+    "question": "How long does shipping take?",
+    "answer": "Shipping usually takes 3 to 7 business days."
+  },
+  {
+    "question": "Do you provide international shipping?",
+    "answer": "Yes, international shipping is available."
+  },
+  {
+    "question": "How can I update my profile information?",
+    "answer": "You can edit your profile details from the account settings page."
+  },
+  {
+    "question": "How do I create an account?",
+    "answer": "Click on the 'Sign Up' button at the top right of the homepage, fill in your details, and verify your email to create an account."
+  },
+  {
+    "question": "Do you offer any discounts for bulk orders?",
+    "answer": "Yes, we offer bulk discounts for orders exceeding 50 items. Please contact our corporate sales team at sales@example.com for a quote."
+  },
+  {
+    "question": "What is your warranty policy?",
+    "answer": "All our hardware products come with a standard 1-year manufacturing warranty from the date of purchase."
+  },
+  {
+    "question": "Can I purchase a gift card?",
+    "answer": "Yes, electronic gift cards are available on our website in values ranging from $10 to $500."
+  },
+  {
+    "question": "How do I track my delivery?",
+    "answer": "Once your order is shipped, you will receive an email containing a tracking link and a tracking number to follow your package."
+  }
+]
