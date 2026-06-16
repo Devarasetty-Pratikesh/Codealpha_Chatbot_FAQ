@@ -10,10 +10,13 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # --- NLTK Setup ---
 import nltk
-# Programmatically ensure NLTK packages are downloaded locally
+# Set NLTK data paths dynamically for write-access in serverless environments (like Vercel)
+nltk_data_path = os.path.join('/tmp', 'nltk_data') if sys.platform != 'win32' else os.path.expanduser('~/nltk_data')
+if nltk_data_path not in nltk.data.path:
+    nltk.data.path.append(nltk_data_path)
+
 for resource in ['punkt', 'stopwords', 'punkt_tab']:
     try:
-        # Check if the resource is available
         if resource == 'punkt':
             nltk.data.find('tokenizers/punkt')
         elif resource == 'punkt_tab':
@@ -21,8 +24,8 @@ for resource in ['punkt', 'stopwords', 'punkt_tab']:
         else:
             nltk.data.find('corpora/stopwords')
     except LookupError:
-        # Download resource quietly if not found
-        nltk.download(resource, quiet=True)
+        # Download resource to writable path quietly
+        nltk.download(resource, download_dir=nltk_data_path, quiet=True)
 
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
